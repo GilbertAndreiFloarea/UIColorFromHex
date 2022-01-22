@@ -1,0 +1,78 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "UIColorFromHex-debug.module": ["<UIColorFromHex-debug.module>"]
+  "UIColorFromHexPackageTests-debug.test": ["<UIColorFromHexPackageTests-debug.test>"]
+  "UIColorFromHexTests-debug.module": ["<UIColorFromHexTests-debug.module>"]
+  "main": ["<UIColorFromHex-debug.module>"]
+  "test": ["<UIColorFromHex-debug.module>","<UIColorFromHexPackageTests-debug.test>","<UIColorFromHexTests-debug.module>"]
+default: "main"
+nodes:
+  "/Users/gilbertandreifloarea/Work/UIColorFromHex/Sources/UIColorFromHex/":
+    is-directory-structure: true
+  "/Users/gilbertandreifloarea/Work/UIColorFromHex/Tests/UIColorFromHexTests/":
+    is-directory-structure: true
+commands:
+  "<UIColorFromHex-debug.module>":
+    tool: phony
+    inputs: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHex.build/UIColorFromHex.swift.o","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHex.swiftmodule"]
+    outputs: ["<UIColorFromHex-debug.module>"]
+
+  "<UIColorFromHexPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHexPackageTests.xctest/Contents/MacOS/UIColorFromHexPackageTests"]
+    outputs: ["<UIColorFromHexPackageTests-debug.test>"]
+
+  "<UIColorFromHexTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHexTests.build/UIColorFromHexTests.swift.o","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHexTests.swiftmodule"]
+    outputs: ["<UIColorFromHexTests-debug.module>"]
+
+  "C.UIColorFromHex-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/Sources/UIColorFromHex/UIColorFromHex.swift"]
+    outputs: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHex.build/UIColorFromHex.swift.o","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHex.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "UIColorFromHex"
+    module-output-path: "/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHex.swiftmodule"
+    import-paths: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHex.build"
+    objects: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHex.build/UIColorFromHex.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j12","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHex.build/UIColorFromHex-Swift.h","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk","-target","x86_64-apple-ios13.0-simulator"]
+    sources: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/Sources/UIColorFromHex/UIColorFromHex.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 12
+
+  "C.UIColorFromHexPackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHex.build/UIColorFromHex.swift.o","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHexTests.build/UIColorFromHexTests.swift.o"]
+    outputs: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHexPackageTests.xctest/Contents/MacOS/UIColorFromHexPackageTests"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/UIColorFromHexPackageTests.xctest/Contents/MacOS/UIColorFromHexPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug","-o","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHexPackageTests.xctest/Contents/MacOS/UIColorFromHexPackageTests","-module-name","UIColorFromHexPackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHexPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.5/macosx","-target","x86_64-apple-macosx11.0","-Xlinker","-add_ast_path","-Xlinker","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHex.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHexTests.swiftmodule","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk","-target","x86_64-apple-ios13.0-simulator","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.UIColorFromHexTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/Tests/UIColorFromHexTests/UIColorFromHexTests.swift","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHex.swiftmodule"]
+    outputs: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHexTests.build/UIColorFromHexTests.swift.o","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHexTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "UIColorFromHexTests"
+    module-output-path: "/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHexTests.swiftmodule"
+    import-paths: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHexTests.build"
+    objects: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHexTests.build/UIColorFromHexTests.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx11.0","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j12","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk","-target","x86_64-apple-ios13.0-simulator"]
+    sources: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/Tests/UIColorFromHexTests/UIColorFromHexTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 12
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/gilbertandreifloarea/Work/UIColorFromHex/Sources/UIColorFromHex/","/Users/gilbertandreifloarea/Work/UIColorFromHex/Tests/UIColorFromHexTests/","/Users/gilbertandreifloarea/Work/UIColorFromHex/Package.swift","/Users/gilbertandreifloarea/Work/UIColorFromHex/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

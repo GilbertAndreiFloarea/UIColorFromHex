@@ -1,0 +1,4 @@
+module UIColorFromHex {
+    header "/Users/gilbertandreifloarea/Work/UIColorFromHex/.build/x86_64-apple-macosx/debug/UIColorFromHex.build/UIColorFromHex-Swift.h"
+    requires objc
+}
